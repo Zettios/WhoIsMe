@@ -1,24 +1,23 @@
-<!---- MAIN NAV BAR ---->
-<nav class="navbar">
-  <img ngSrc="derp_sticker.png" width="40" height="40" class="navbarImageNav" priority>
-  <div (click)="showMobileNavItems()" class="navbarIconContainer">
-    <i class="bi bi-list navbarIcon"></i>
-  </div>
-</nav>
+<nav class="navbar position-fixed w-100 navbar-expand-md navbar-bg">
+  <div class="container-fluid">
 
-<!---- MOBILE SIDE NAV DRAWER ---->
-<div [@openClose]="isShowingMobileNavContainer ? 'open' : 'closed'" class="mobileNavContainer d-flex flex-column">
-  <div class="d-flex justify-content-end p-2">
-    <span class="position-absolute navTitleText align-self-center">Navigation</span>
-    <div (click)="showMobileNavItems()" class="navbarIconContainer">
-      <i class="bi bi-arrow-left navbarIcon"></i>
+    <a class="navbar-brand" href="#">
+      <img ngSrc="derp_sticker.png" width="40" height="40" class="" priority>
+    </a>
+
+    <button class="navIconButton d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list text-white"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="#">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="#">Projects</a>
+        </li>
+      </ul>
     </div>
   </div>
- 
-  <hr class="border m-0">
-  
-  <nav class="nav flex-column text-center align-items-center">
-    <a class="p-2 w-100 text-decoration-none page-nav-link" href="#">About me</a>
-    <a class="p-2 w-100 text-decoration-none page-nav-link" href="#">Projects</a>
-  </nav>
-</div>
+</nav>
