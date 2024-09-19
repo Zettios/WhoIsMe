@@ -1,7 +1,7 @@
-<nav class="navbar position-fixed w-100 navbar-expand-md navbar-bg">
+<nav class="navbar position-sticky w-100 top-0 navbar-expand-md navbar-bg">
   <div class="container-fluid">
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/">
       <img ngSrc="derp_sticker.png" width="40" height="40" class="" priority>
     </a>
 
@@ -12,10 +12,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav text-center">
         <li class="nav-item">
-          <a class="nav-link text-white" aria-current="page" href="#">About me</a>
+          <a class="nav-link text-secondary" routerLinkActive="text-white" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" routerLink="/">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Projects</a>
+          <a class="nav-link text-secondary" routerLinkActive="text-white" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" routerLink="/projects">Projects</a>
         </li>
       </ul>
     </div>

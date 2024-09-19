@@ -1,11 +1,12 @@
 import { Component, HostListener  } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ NgOptimizedImage ],
+  imports: [ NgOptimizedImage, RouterLink, RouterModule ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   // animations: [
